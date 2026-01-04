@@ -1,0 +1,180 @@
+ <!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤷‍♀️Mengleang Portfolio</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="150">
+
+    <header class="w-100 positសion-fixed top-0 pt-4 align-items-center justify-content-center" style="z-index: 1000;">
+        <div class="d-flex justify-content-center">
+            <nav id="mainNav" class="nav custom-navbar-pill p-2 align-items-center justify-content-center">
+                <a class="nav-link mx-1 px-3" href="#home">Home</a>
+                <a class="nav-link mx-1 px-3" href="#about">About</a>
+                <a class="nav-link mx-1 px-3" href="#project">Projects</a>
+                <a class="nav-link mx-1 px-3" href="#skill">Skills</a>
+                <a class="nav-link mx-1 px-3" href="#experience">Experience</a>
+                <a class="nav-link mx-1 px-3" href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <div class="mb-4 mx-auto" style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 25px rgba(255,255,255,0.6);">
+                 <img src="./profile1.jpg" alt="profile" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <h1 class="display-3 fw-bold mb-3">Hello,🙌 I'm Mengleang.</h1>
+            <p class="fs-4 italic mb-2">
+                <b>I'm a student in RUPP</b>, I’m constantly evolving through new challenges.
+            </p>
+            <p class="fs-5 text-secondary mb-5">I’m a firm believer in trying everything once.</p>
+            
+            <div class="d-flex justify-content-center gap-4">
+                <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="text-dark social-link" title="GitHub">
+                    <i class="fa-brands fa-github fs-3"></i>
+                </a>
+                <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="text-dark social-link" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin fs-3"></i>
+                </a>
+                <a href="https://x.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="text-dark social-link" title="X (formerly Twitter)">
+                    <i class="fa-brands fa-x-twitter fs-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container py-5">
+        <h2 class="section-title">About Me</h2>
+        <div class="row justify-content-center text-center">
+            <div class="col-md-9">
+                <img src="./profile.jpg" class="img-fluid rounded-4 mb-4 shadow-lg" style="max-height: 900px; width: 70%; object-fit: cover;" alt="About Me">
+                <p class="fs-5">Hello! 🙌 I'm Mengleang, a student at RUPP. Over the past two years, I’ve focused on building a strong technical foundation in Java and Web development through intensive self-study and specialized training. I have hands-on experience with NextJS, Angular, and Solidity. My portfolio includes projects ranging from Java-based Inventory Management systems to my main web project, JobCollab.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="container py-5">
+        <h2 class="section-title">Projects</h2>
+        
+        <div class="project-card p-4 p-md-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-2 order-md-1">
+                    <h3 class="fw-bold">INVENTORY MANAGEMENT</h3>
+                    <p class="text-secondary mt-3">Developed a desktop application using Java to streamline stock tracking and data organization.</p>
+                    <div class="mt-4">
+                        <span class="tech-badge">JAVA</span>
+                        <span class="tech-badge">DATABASE</span>
+                        <span class="tech-badge">OOP</span>
+                    </div>
+                </div>
+                <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+                    <img src="./inventorymanagement.jpg" class="img-fluid rounded-3 shadow" alt="Inventory Project">
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card p-4 p-md-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="./jobcollap.jpg" class="img-fluid rounded-3 shadow" alt="JobCollab Project">
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0 text-md-end">
+                    <h3 class="fw-bold ">JOBCOLLAB</h3>
+                    <p class="text-secondary mt-3">Built a collaborative web platform using NextJS and Angular for the frontend, with Solidity for blockchain integration.</p>
+                    <div class="mt-4">
+                        <span class="tech-badge">REACT JS</span>
+                        <span class="tech-badge">TAILWINDCSS</span>
+                        <span class="tech-badge">BLOCKCHAIN</span>
+                        <span class="tech-badge">FIGMA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skill" class="container py-5 text-center">
+        <h2 class="section-title">Skills</h2>
+        <div class="d-flex flex-wrap justify-content-center" style="max-width: 950px; margin: 0 auto;">
+            <div class="skill-tag">Blockchain</div><div class="skill-tag">CSS</div>
+            <div class="skill-tag">HTML</div><div class="skill-tag">Java</div><div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">Next.js</div><div class="skill-tag">PostgreSQL</div>
+            <div class="skill-tag">Figma</div><div class="skill-tag">React</div>
+            <div class="skill-tag">TailwindCSS</div>
+        </div>
+    </section>
+
+    <section id="experience" class="container py-5">
+        <h2 class="section-title">My Experience</h2>
+        <div class="experience-container">
+            <div class="timeline-item left">
+                <div class="timeline-dot"><i class="fas fa-desktop text-primary"></i></div>
+                <div class="timeline-card">
+                    <h5 class="fw-bold">First Experience</h5>
+                    <p class="text-muted small">CSTAD SCHOOL | 2024</p>
+                    <p class="mb-0">My first experience is C++</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"><i class="fas fa-graduation-cap text-success"></i></div>
+                <div class="timeline-card">
+                    <h5 class="fw-bold">Second Experience</h5>
+                    <p class="text-muted small">CSTAD SCHOOL | 2025</p>
+                    <p class="mb-0">My second experience is WEB </p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"><i class="fas fa-code text-danger"></i></div>
+                <div class="timeline-card">
+                    <h5 class="fw-bold">Third Experience</h5>
+                    <p class="text-muted small">INVEMENT MANAGEMENT | 2025</p>
+                    <p class="mb-0"> My third experience is JAVA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container py-5 text-center">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="mb-5 fs-5">Feel free to reach out to me at <a href="mailto:contact@mengleang.com" class="text-decoration-none fw-bold" style="color: #333;">contact@mengleang.com</a> or through the form below.</p>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="project-card p-4 p-md-5 text-start">
+                    <form>
+                        <div class="mb-4">
+                            <input type="email" class="form-control custom-input" placeholder="Your email" required>
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control custom-input" rows="5" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-submit d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Submit
+                        </button>
+                    </form>
+                </div>
+                <div class="mt-5 text-secondary">
+                    <p class="small mb-1">© 2025 Mengleang. All rights reserved.</p>
+                    <p class="small"><b>About this website:</b> built with Bootstrap and FontAwesome.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
+ 
+
+
+
+
