@@ -1,4 +1,4 @@
-       /* Sstyle Of index.html */
+/* Sstyle Of index.html */
        body {
             background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100% );
             min-height: 100vh;
@@ -37,15 +37,24 @@
         }
         .project-card:hover { transform: translateY(-5px); }
         
-        .tech-badge {
-            background-color: #4b4b4b;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-right: 5px;
-            text-transform: uppercase;
-        }
+       /* Container for the badges */
+.tech-stack {
+    display: flex;      /* Enables Flexbox layout */
+    flex-wrap: wrap;    /* Allows badges to drop to a new line when space runs out */
+    gap: 10px;          /* Adds consistent spacing between badges horizontally and vertically */
+    margin-top: 15px;   /* Adds space above the badge group */
+}
+
+.tech-badge {
+    background-color: #4b4b4b; /* */
+    color: white;             /* */
+    padding: 5px 15px;        /* */
+    border-radius: 20px;      /* */
+    font-size: 0.9rem;        /* */
+    text-transform: uppercase; /* */
+    display: inline-block;    /* */
+    /* Removed margin-right because 'gap' handles spacing better */
+}
 
         /* --- Skill Tag Styling --- */
         .skill-tag {
@@ -60,53 +69,119 @@
         }
 
         /* --- Experience Timeline --- */
-        .experience-container {
-            position: relative;
-            padding: 40px 0;
-        }
-        .experience-container::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: rgba(255, 255, 255, 0.5);
-            transform: translateX(-50%);
-        }
-        .timeline-item {
-            margin-bottom: 60px;
-            position: relative;
-            width: 50%;
-        }
-        .timeline-item.left { left: 0; padding-right: 40px; text-align: right; }
-        .timeline-item.right { left: 50%; padding-left: 40px; text-align: left; }
+        /* --- Experience Timeline --- */
+.experience-container {
+    position: relative;
+    padding: 60px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-        .timeline-dot {
-            position: absolute;
-            top: 20px;
-            width: 50px; height: 50px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .left .timeline-dot { right: -25px; }
-        .right .timeline-dot { left: -25px; }
+/* Central Vertical Line */
+.experience-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(-50%);
+}
 
-        .timeline-card {
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(5px);
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            display: inline-block;
-            max-width: 450px;
-            text-align: left;
-        }
+.timeline-item {
+    margin-bottom: 80px;
+    position: relative;
+    width: 50%;
+}
+
+/* Desktop Alignment */
+.timeline-item.left { left: 0; padding-right: 50px; text-align: right; }
+.timeline-item.right { left: 50%; padding-left: 50px; text-align: left; }
+
+/* Timeline Circles/Dots */
+.timeline-dot {
+    position: absolute;
+    top: 15px;
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
+}
+
+.left .timeline-dot { right: -22px; }
+.right .timeline-dot { left: -22px; }
+
+/* Timeline Content Cards */
+.timeline-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    width: 100%;
+    max-width: 480px;
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-card:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Form & UI Elements --- */
+.custom-input {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border-radius: 15px !important;
+    padding: 14px !important;
+    transition: 0.3s;
+}
+
+.custom-input:focus {
+    background: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 0 0 0.25rem rgba(142, 197, 252, 0.25) !important;
+}
+
+.btn-submit {
+    background: #1a1c23 !important;
+    border-radius: 50px !important;
+    padding: 12px 35px !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* --- Responsive (Mobile View) --- */
+@media (max-width: 968px) {
+    .experience-container::before { left: 30px; }
+    
+    .timeline-item { 
+        width: 100% !important; 
+        left: 0 !important; 
+        padding-left: 70px !important; 
+        padding-right: 20px !important; 
+        text-align: left !important; 
+    }
+    
+    .timeline-dot { left: 8px !important; }
+    
+    .timeline-card { max-width: 100%; }
+}
 
         /* --- Contact Form Styling --- */
         .custom-input {
@@ -122,7 +197,6 @@
             border: none;
             color: white;
         }
-
         .social-link {
             transition: opacity 0.2s ease, transform 0.2s ease;
             display: inline-block;
@@ -139,6 +213,3 @@
             .timeline-item { width: 100% !important; left: 0 !important; padding-left: 60px !important; text-align: left !important; }
             .timeline-dot { left: -5px !important; }
         }
-
-        
-        
